@@ -377,6 +377,7 @@ header nav ul li a:hover {
 .feature-title {
   color: #fff;
   font-size: 40px;
+  line-height: 60px;
 }
 .feature-description {
   color: #c5c5c5;
