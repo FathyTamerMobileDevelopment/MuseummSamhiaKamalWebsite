@@ -413,10 +413,12 @@ header nav ul li a:hover {
   }
   .feature-title {
     max-width: 100%;
-    font-size: 40px;
+    font-size: 24px;
   }
   .feature-description {
     max-width: 100%;
+    font-size: 16px;
+
   }
 }
 .newsletter-container {
