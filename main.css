@@ -120,7 +120,7 @@ header nav ul li a:hover {
 .palace-content {
   align-self: end;
   display: flex;
-  margin-right: 250px;
+  margin-right: 250px; /*edit*/
   width: 100%;
   max-width: 1288px;
   flex-direction: column;
