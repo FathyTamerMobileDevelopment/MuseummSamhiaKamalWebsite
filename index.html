@@ -12,15 +12,20 @@
 
 <body>
   <header>
-    <div class="logo">Museum</div>
+    <div class="logo">Meuseumm</div>
+    <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#pictures">Pictures From The Museum</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
+  
+  
+  
 
   <section class="hero">
     <div class="hero-content">
@@ -157,6 +162,26 @@
       </div>
     </footer>
   </section>
+
+
+
+  <script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle'); // زر القائمة
+  const navMenu = document.querySelector('nav ul'); // القائمة المنسدلة
+
+  if (menuToggle && navMenu) { // تحقق من وجود العناصر قبل إضافة الحدث
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show'); // إضافة أو إزالة كلاس "show"
+    });
+  } else {
+    console.error('Menu toggle or nav menu not found'); // رسالة خطأ إذا لم يتم العثور على العناصر
+  }
+});
+
+
+  </script>
 </body>
 
 </html>
