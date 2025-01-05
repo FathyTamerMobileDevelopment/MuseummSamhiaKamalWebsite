@@ -31,7 +31,7 @@ header .logo {
 }
 
 header nav ul {
-  display: none; /* إخفاء القائمة افتراضيًا */
+  display: none; /* Hidden by default */
   flex-direction: column;
   list-style: none;
   gap: 20px;
@@ -43,11 +43,11 @@ header nav ul {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  z-index: 5; /* قائمة المنسدلة */
+  z-index: 5;
 }
 
 header nav ul.show {
-  display: flex; /* تظهر القائمة عند النقر */
+  display: flex; /* Show menu on toggle */
 }
 
 header nav ul li a {
@@ -64,20 +64,20 @@ header nav ul li a:hover {
 
 /* Toggle Button */
 .menu-toggle {
-  display: none; /* مخفي افتراضيًا في الشاشات الكبيرة */
+  display: none; /* Hidden in desktop mode */
   font-size: 24px;
   color: white;
   cursor: pointer;
   background: none;
   border: none;
   outline: none;
-  position: absolute; /* وضع الزر فوق القائمة */
-  top: 20px; /* تعديل الموضع */
-  right: 20px; /* تعديل الموضع */
-  z-index: 10; /* جعل الزر فوق القائمة */
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
 }
 
-/* Responsive Styles */
+/* Mobile View */
 @media (max-width: 768px) {
   header {
     padding: 15px 20px;
@@ -86,24 +86,48 @@ header nav ul li a:hover {
   }
 
   .menu-toggle {
-    display: block; /* زر القائمة يظهر فقط في الشاشات الصغيرة */
-  }
-}
-
-@media (min-width: 769px) {
-  .menu-toggle {
-    display: none; /* زر القائمة مخفي في الشاشات الكبيرة */
+    display: block; /* Show toggle button in mobile view */
   }
 
   nav ul {
-    display: flex; /* تظهر القائمة في الشاشات الكبيرة */
-    flex-direction: row;
-    position: static;
-    background: none;
-    padding: 0;
-    box-shadow: none;
+    display: none; /* Hide menu in mobile view */
+  }
+
+  nav ul.show {
+    display: flex; /* Show menu when toggled */
+  }
+
+  nav ul {
+    flex-direction: column; /* Make menu vertical in mobile */
+    gap: 20px;
   }
 }
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: block; /* Hide toggle button in desktop view */
+  }
+
+  nav ul {
+    display: flex; /* Always visible in desktop view */
+    flex-direction: row; /* Horizontal menu in desktop view */
+    list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
+    position: static; /* Reset position */
+    background: none; /* No background in desktop view */
+    box-shadow: none;
+  }
+
+  header {
+    padding: 20px 120px; /* Reset padding for desktop */
+    flex-direction: row; /* Align items horizontally */
+    align-items: center;
+  }
+}
+
 
 
 /* Hero Section */

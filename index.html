@@ -167,19 +167,19 @@
 
 
   <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.querySelector('.menu-toggle'); // Select the toggle button
+  const navMenu = document.querySelector('nav ul'); // Select the menu
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const menuToggle = document.querySelector('.menu-toggle'); // زر القائمة
-      const navMenu = document.querySelector('nav ul'); // القائمة المنسدلة
-
-      if (menuToggle && navMenu) { // تحقق من وجود العناصر قبل إضافة الحدث
-        menuToggle.addEventListener('click', () => {
-          navMenu.classList.toggle('show'); // إضافة أو إزالة كلاس "show"
-        });
-      } else {
-        console.error('Menu toggle or nav menu not found'); // رسالة خطأ إذا لم يتم العثور على العناصر
-      }
+  // Ensure elements exist before adding event listener
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('show'); // Add or remove the "show" class
     });
+  } else {
+    console.error('Menu toggle or nav menu not found'); // Log error if elements are missing
+  }
+});
 
 
   </script>
