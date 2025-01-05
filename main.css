@@ -439,6 +439,7 @@ header nav ul li a:hover {
   .feature-title {
     max-width: 100%;
     font-size: 24px;
+    line-height: 30px;
   }
   .feature-description {
     max-width: 100%;
@@ -710,7 +711,7 @@ header nav ul li a:hover {
 .newsletter-wrapper {
   align-self: center;
   display: flex;
-  width: 536px;
+  width: 600px;
   max-width: 100%;
   flex-direction: column;
 }
@@ -880,4 +881,5 @@ header nav ul li a:hover {
     gap: 40px;
     flex-wrap: wrap;
   }
+
 }
